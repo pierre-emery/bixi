@@ -1,5 +1,7 @@
 \documentclass[10pt]{article}
 
+\usepackage{blindtext}
+
 % Marges et dimensions en picas
 \usepackage[left=9pc,textwidth=33pc,textheight=54pc]{geometry}
 \usepackage{microtype}
@@ -21,7 +23,7 @@
 \titlespacing*{\subsection}{0pt}{11pt}{5.5pt}
 \usepackage{hyperref}
 
-\title{Proposition : Analyse et classification des stations à risque de saturation/pénurie}
+\title{Proposition : Analyse et classification des stations de bixi à risque de saturation/pénurie}
 
 \author{
 \href{mailto:xavier.drolet@umontreal.ca}{Xavier Drolet XXXXXXXX}
@@ -39,9 +41,34 @@
 
 \section{Description et objectifs du projet}
 
+\subsection{Description}
+Dans le cadre de ce projet, nous proposons d'étudier les données du système de vélos en libre-service BIXI à Montréal. Ce choix nous semble pertinent, car ces données sont à la fois réelles, accessibles publiquement et suffisamment riches pour permettre l'application de plusieurs méthodes vues dans le cours. Le système de données ouvertes de BIXI nous permet de récuperer des données tabulaire, temporelle et spatiale, ce qui en fait un terrain intéressant pour l'analyse exploratoire, la classification, le clustering et la réduction de dimension.
+
+\subsection{Objectifs}
+Le projet poursuit deux objectifs principaux, d'abord l'analyse des profils d'utilisation des stations BIXI à Montréal, l'idée est d'évaluer dans quelle mesure certaines méthodes d'analyse de données permettent de distinguer différents comportements de stations. Plus précisément, nous souhaitons étudier si l'on peut identifier des groupes de stations ayant des profils semblables selon leur localisation, leur niveau de disponibilité en vélos et en bornes, ainsi que leurs variations au cours du temps.
+
+Ensuite, nous voulons comme deuxième objectif explorer la possibilité de classifier certaines situations d'intérêt, par exemple des états où une station est à risque d'être presque vide ou presque pleine. Cependant cette tâche sera plus compliquée parce que le jeu de données pour l'état des stations est juste en temps réel, nous pensions alors créer le jeu de données nécessaire pour cette tâche en ayant un scrit python qui roule sans arrêt et qui, à toutes les dix minutes télécharges les fichiers .json qui nous informent sur l'état des stations.
+
+\subsection{Notions du cours appliquées}
+\blindtext
+
 \section{Contributions prévues de chaque membre de l'équipe}
 
+Le projet sera réalisé de manière collaborative, et nous comptons idéalement travailler ensemble sur plusieurs de ses grandes étapes. La répartition présentée ci-dessous doit donc être comprise comme un plan préliminaire pour structurer le travail que nous allons surement adapter lorsque nous travaillerons concrètement sur le projet.
+
+Nous pensons travailler tous les trois sur l'analyse exploratoire, ainsi que l'interprétation des résultats et la rédaction du rapport. 
+Le reste des tâches sera divisé ainsi :
+\begin{enumerate}
+    \item Un premier membre s'occupera principalement de la collecte et de l'organisation initiale des données. Cela comprendra notamment la récupération des données ouvertes de BIXI, la compréhension de leur structure et il travaillera aussi plus tard sur les méthodes de réduction de dimension.
+    \item Un deuxième membre prendra surtout en charge le nettoyage et le prétraitement des données. Son travail portera par exemple sur la sélection des variables pertinentes, le traitement des valeurs manquantes, l'uniformisation des formats et la création de variables dérivées utiles pour l'analyse.
+    \item Un troisième membre se concentrera davantage sur l'implantation et la comparaison des méthodes d'analyse. Cela inclura notamment les algorithmes de classification, de regroupement et, si possible, certaines méthodes de réduction de dimension vues dans le cours.
+\end{enumerate}
+
+Même si certaines responsabilités principales sont prévues, nous voulons conserver une approche flexible où chaque membre pourra contribuer à plusieurs parties du projet selon l'avancement du travail et les besoins de l'équipe.
+
 \section{Données utilisées et source des données}
+
+Les données utilisées dans ce projet proviendront des données ouvertes de BIXI Montréal. Nous comptons utiliser les informations sur les stations, leur localisation ainsi que les données en temps réel sur la disponibilité des vélos et des bornes. Les données historiques et les flux en temps réel sont accessibles sur la page officielle des données ouvertes de BIXI : \url{https://bixi.com/fr/donnees-ouvertes/}. 
 \end{document}
 
 
