@@ -23,9 +23,9 @@
 \title{Proposition : Analyse, regroupement et classification des collisions routières à Montréal}
 
 \author{
-\href{mailto:xavier.drolet@umontreal.ca}{Xavier Drolet XXXXXXXX}
+\href{mailto:xavier.drolet.2@umontreal.ca}{Xavier Drolet 20276341}
 \and
-\href{mailto:benjamin.dockins@umontreal.ca}{Benjamin Dockins XXXXXXXX}
+\href{mailto:benjamin.dockins@umontreal.ca}{Benjamin Dockins 20267474}
 \and
 \href{mailto:pierre.emery@umontreal.ca}{Pierre Emery 20278920}
 }
@@ -42,9 +42,11 @@
 Dans le cadre de ce projet, nous proposons d’étudier les données ouvertes sur les collisions routières à Montréal. Ce choix nous semble particulièrement pertinent, car ce jeu de données est à la fois réel, public, riche en variables et directement exploitable pour plusieurs méthodes vues dans le cours. Les données comportent notamment des informations spatiales, temporelles et descriptives sur les collisions, ce qui en fait un terrain intéressant pour l’analyse exploratoire, le regroupement, la classification et la réduction de dimension.
 
 \subsection{Objectifs}
-Le projet poursuivra deux objectifs principaux. Le premier consistera à analyser les collisions routières afin d’identifier différents profils de collisions à Montréal. Plus précisément, nous souhaitons étudier s’il est possible de regrouper les collisions selon des caractéristiques communes, par exemple leur contexte spatial, leur moment de survenue, certaines conditions environnementales ou encore certains éléments liés au type d’accident. L’idée sera d’évaluer dans quelle mesure des méthodes de regroupement permettent de faire ressortir des structures naturelles dans les données.
+Le projet poursuivra deux objectifs principaux (et un troisième optionnel). Le premier consistera à analyser les collisions routières afin d’identifier différents profils de collisions à Montréal. Plus précisément, nous souhaitons étudier s’il est possible de regrouper les collisions selon des caractéristiques communes, par exemple leur contexte spatial, leur moment de survenue, certaines conditions environnementales ou encore certains éléments liés au type d’accident. L’idée sera d’évaluer dans quelle mesure des méthodes de regroupement permettent de faire ressortir des structures naturelles dans les données.
 
-Le deuxième objectif sera d’explorer une tâche de classification supervisée. Nous souhaitons étudier si certaines caractéristiques d’une collision permettent de prédire une variable d’intérêt déjà présente dans le jeu de données dans notre cas la gravité de la collision.  Nous pourrons ainsi comparer différentes approches de classification afin de déterminer lesquelles semblent les plus adaptées à ce type de données.
+Le deuxième objectif sera d’explorer une tâche de classification supervisée. Nous souhaitons étudier si certaines caractéristiques d’une collision permettent de prédire une variable d’intérêt déjà présente dans le jeu de données dans notre cas la gravité de la collision. Pour ce faire, nous planifions faire utilisation des nombreux attributs associés à chaque accident par la \href{https://donnees.montreal.ca/dataset/collisions-routieres#methodology}{Ville de Montréal} et, possiblement, \href{https://donnees.montreal.ca/dataset/comptage-vehicules-pietons}{des données d'achalandage d'intersections} pour augmenter la qualité et généralisation des nos classifications. Nous pourrons ainsi comparer différentes approches de classification afin de déterminer lesquelles semblent les plus adaptées à ce type de données.
+
+Troisièmement, si le temps le permet, il serait intéressant de formuler une modélisation de prédiction de localisations plus \textit{dangereuses} dans Montréal en lien avec la probabilité d'accident routier grave.
 
 \subsection{Notions du cours appliquées}
 Sur le plan méthodologique, ce projet nous permettra d’appliquer plusieurs notions abordées en classe. Nous commencerons par une phase de préparation, de nettoyage et d’exploration des données à l’aide de statistiques descriptives, de tableaux de synthèse et de visualisations. Nous prévoyons ensuite utiliser des méthodes de regroupement comme les k-moyennes, le regroupement hiérarchique ou DBSCAN afin d’identifier des profils récurrents de collisions.
@@ -66,9 +68,9 @@ Même si certaines responsabilités principales sont prévues, il est très fort
 
 \section{Données utilisées et source des données}
 
-Les données utilisées dans ce projet proviendront principalement du jeu de données ouvert de la Ville de Montréal sur les collisions routières. Nous comptons utiliser les variables décrivant les collisions, notamment leurs caractéristiques spatiales, temporelles et contextuelles, afin d’effectuer les différentes analyses prévues. Selon l’avancement du projet, il y a également un autre jeu de données que nous hésitons à utiliser, il porte sur les intersections munies de feux de circulation ou sur les comptages de véhicules, piétons et cyclistes, afin d’enrichir certaines analyses et on hesiterait à l'utiliser pour extraire des caractéristiques de plus comme le nombre de piétons à l'intersection la plus proche au moment de l'accident ou d'autres pistes de la sorte.
+Les données utilisées dans ce projet proviendront principalement du jeu de données ouvert de la Ville de Montréal sur les collisions routières. Nous comptons utiliser les variables décrivant les collisions, notamment leurs caractéristiques spatiales, temporelles et contextuelles, afin d’effectuer les différentes analyses prévues. Selon l’avancement du projet, il y a également un autre jeu de données qui pourrait être inclus. Il porte sur les intersections munies de feux de circulation ou sur les comptages de véhicules, piétons et cyclistes, afin d’enrichir certaines analyses. Celui-ci pourrait être utilisé pour extraire des caractéristiques de plus comme le nombre de piétons à l'intersection la plus proche au moment de l'accident ou d'autres pistes de la sorte.
 
-La source principale des données est la suivante : \url{https://donnees.montreal.ca/dataset/collisions-routieres}.
-(et on utilisera peut-être \url{https://donnees.montreal.ca/dataset/comptage-vehicules-pietons})
+La source principale des données est la suivante : \url{https://donnees.montreal.ca/dataset/collisions-routieres}.\\
+De plus, \url{https://donnees.montreal.ca/dataset/comptage-vehicules-pietons}
 
 \end{document}
