@@ -23,9 +23,9 @@
 \title{Proposition : Analyse, regroupement et classification des collisions routières à Montréal}
 
 \author{
-\href{mailto:xavier.drolet@umontreal.ca}{Xavier Drolet XXXXXXXX}
+\href{mailto:xavier.drolet.2@umontreal.ca}{Xavier Drolet 20276341}
 \and
-\href{mailto:benjamin.dockins@umontreal.ca}{Benjamin Dockins XXXXXXXX}
+\href{mailto:benjamin.dockins@umontreal.ca}{Benjamin Dockins 20267474}
 \and
 \href{mailto:pierre.emery@umontreal.ca}{Pierre Emery 20278920}
 }
@@ -42,33 +42,34 @@
 Dans le cadre de ce projet, nous proposons d’étudier les données ouvertes sur les collisions routières à Montréal. Ce choix nous semble particulièrement pertinent, car ce jeu de données est à la fois réel, public, riche en variables et directement exploitable pour plusieurs méthodes vues dans le cours. Les données comportent notamment des informations spatiales, temporelles et descriptives sur les collisions, ce qui en fait un terrain intéressant pour l’analyse exploratoire, le regroupement, la classification et la réduction de dimension.
 
 \subsection{Objectifs}
-Le projet poursuivra deux objectifs principaux. Le premier consistera à analyser les collisions routières afin d’identifier différents profils de collisions à Montréal. Plus précisément, nous souhaitons étudier s’il est possible de regrouper les collisions selon des caractéristiques communes, par exemple leur contexte spatial, leur moment de survenue, certaines conditions environnementales ou encore certains éléments liés au type d’accident. L’idée sera d’évaluer dans quelle mesure des méthodes de regroupement permettent de faire ressortir des structures naturelles dans les données.
+Le projet poursuivra deux objectifs principaux (et un troisième optionnel). Le premier consistera à analyser les collisions routières afin d’identifier différents profils de collisions à Montréal. Plus précisément, nous souhaitons étudier s’il est possible de regrouper les collisions selon des caractéristiques communes, par exemple leur contexte spatial, leur moment de survenue, certaines conditions environnementales ou encore certains éléments liés au type d’accident. L’idée sera d’évaluer dans quelle mesure des méthodes de regroupement permettent de faire ressortir des structures naturelles dans les données.
 
-Le deuxième objectif sera d’explorer une tâche de classification supervisée. Nous souhaitons étudier si certaines caractéristiques d’une collision permettent de prédire une variable d’intérêt déjà présente dans le jeu de données dans notre cas la gravité de la collision.  Nous pourrons ainsi comparer différentes approches de classification afin de déterminer lesquelles semblent les plus adaptées à ce type de données.
+Le deuxième objectif sera d’explorer une tâche de classification supervisée. Nous souhaitons étudier si certaines caractéristiques d’une collision permettent de prédire une variable d’intérêt déjà présente dans le jeu de données dans notre cas la gravité de la collision. Pour ce faire, nous planifions faire utilisation des nombreux attributs associés à chaque accident par la \href{https://donnees.montreal.ca/dataset/collisions-routieres#methodology}{Ville de Montréal} et, possiblement, \href{https://donnees.montreal.ca/dataset/comptage-vehicules-pietons}{des données d'achalandage d'intersections} pour augmenter la qualité et généralisation des nos classifications. Nous pourrons ainsi comparer différentes approches de classification afin de déterminer lesquelles semblent les plus adaptées à ce type de données.
+
+Troisièmement, si le temps le permet, il serait intéressant de formuler une modélisation de prédiction de localisations plus dangereuses dans Montréal en lien avec la probabilité d'accident routier grave.
 
 \subsection{Notions du cours appliquées}
-Sur le plan méthodologique, ce projet nous permettra d’appliquer plusieurs notions abordées en classe. Nous commencerons par une phase de préparation, de nettoyage et d’exploration des données à l’aide de statistiques descriptives, de tableaux de synthèse et de visualisations. Nous prévoyons ensuite utiliser des méthodes de regroupement comme les k-moyennes, le regroupement hiérarchique ou DBSCAN afin d’identifier des profils récurrents de collisions.
+Sur le plan méthodologique, ce projet nous permettra d’appliquer plusieurs notions abordées en classe. Nous commencerons par une phase de préparation, de nettoyage et d’exploration des données à l’aide de statistiques descriptives, de tableaux de synthèse et de visualisations. Nous prévoyons ensuite utiliser et comparer des méthodes de regroupement comme les k-moyennes et le regroupement hiérarchique afin d’identifier des profils récurrents de collisions.
 
-Nous souhaitons également comparer plusieurs méthodes de classification supervisée, par exemple la classification naïve bayésienne, la classification linéaire, les machines à vecteurs de support et les arbres de décision, selon la variable cible retenue. Finalement, des méthodes de réduction de dimension comme la PCA, le MDS ou Isomap pourront être utilisées pour représenter les collisions dans un espace de plus faible dimension et mieux visualiser leur structure. Ce projet vise donc à relier de manière concrète les concepts théoriques vus dans le cours à un problème réel d’analyse de données urbaines.
-
+Nous souhaitons également comparer plusieurs méthodes de classification supervisée. Nous pensons utiliser la classification naïve bayésienne comme baseline, puis implanter des méthodes plus flexibles comme les machines à vecteurs de support et les arbres de décision. Finalement, la PCA sera utilisée comme méthode principale de réduction de dimension. Si ses résultats sont peu concluants, ou si le temps le permet, nous pourrons également la comparer à d’autres approches comme le MDS ou Isomap. Les méthodes de réduction de dimension nous semblent particulièrement pertinentes ici, puisque le jeu de données comporte un grand nombre de variables; elles pourront nous aider à représenter les collisions dans un espace de plus faible dimension et à mieux visualiser leur structure.
 \section{Contributions prévues de chaque membre de l'équipe}
 
 Le projet sera réalisé de manière collaborative, et nous comptons idéalement travailler ensemble sur plusieurs de ses grandes étapes. La répartition présentée ci-dessous doit donc être comprise comme un plan préliminaire pour structurer le travail, que nous pourrons ajuster selon l’avancement du projet.
 
 Nous prévoyons travailler tous les trois sur l’analyse exploratoire, l’interprétation des résultats et la rédaction du rapport. Le reste des tâches sera réparti ainsi :
 \begin{enumerate}
-    \item Un premier membre s’occupera principalement de la collecte et de l’organisation initiale des données. Cela comprendra la récupération du jeu de données, la compréhension de sa structure, la documentation des variables et une participation plus particulière aux méthodes de réduction de dimension et aux visualisations globales.
-    \item Un deuxième membre prendra surtout en charge le nettoyage et le prétraitement des données. Son travail portera notamment sur la sélection des variables pertinentes, le traitement des valeurs manquantes, l’uniformisation des formats, ainsi que la création éventuelle de variables dérivées utiles pour l’analyse et la classification.
-    \item Un troisième membre se concentrera davantage sur l’implantation et la comparaison des méthodes d’analyse. Cela inclura notamment les algorithmes de classification, les méthodes de regroupement et l’évaluation comparative des résultats obtenus.
+    \item Un premier membre s’occupera principalement de la collecte et de l’organisation initiale des données. Cela comprendra la récupération du jeu de données, la compréhension de sa structure, la documentation des variables et ensuite plus tard il travaillera principalement sur les méthodes de réduction de dimension.
+    \item Un deuxième membre prendra surtout en charge le nettoyage et le prétraitement des données. Son travail portera notamment sur la sélection des variables pertinentes, le traitement des valeurs manquantes et l’uniformisation des formats. Il s'occupera après des méthodes de classification.
+    \item Un troisième membre travaillera avec le second membre sur le nettoyage des données mais son travail sera plus axé sur l'extraction de caractéristiques utiles pour l’analyse et la classification. Ensuite il se focalisera sur les méthodes de regroupement.
 \end{enumerate}
 
 Même si certaines responsabilités principales sont prévues, il est très fort probable que ça ne sera pas la répartition finale des tâches et nous adapterons les contributions de chacun au fur et à mesure que nous travaillons sur le projet.
 
 \section{Données utilisées et source des données}
 
-Les données utilisées dans ce projet proviendront principalement du jeu de données ouvert de la Ville de Montréal sur les collisions routières. Nous comptons utiliser les variables décrivant les collisions, notamment leurs caractéristiques spatiales, temporelles et contextuelles, afin d’effectuer les différentes analyses prévues. Selon l’avancement du projet, il y a également un autre jeu de données que nous hésitons à utiliser, il porte sur les intersections munies de feux de circulation ou sur les comptages de véhicules, piétons et cyclistes, afin d’enrichir certaines analyses et on hesiterait à l'utiliser pour extraire des caractéristiques de plus comme le nombre de piétons à l'intersection la plus proche au moment de l'accident ou d'autres pistes de la sorte.
+Les données utilisées dans ce projet proviendront principalement du jeu de données ouvert de la Ville de Montréal sur les collisions routières. Nous comptons utiliser les variables décrivant les collisions, notamment leurs caractéristiques spatiales, temporelles et contextuelles, afin d’effectuer les différentes analyses prévues. Selon l’avancement du projet, il y a également un autre jeu de données qui pourrait être inclus. Il porte sur les intersections munies de feux de circulation ou sur les comptages de véhicules, piétons et cyclistes, afin d’enrichir certaines analyses. Celui-ci pourrait être utilisé pour extraire des caractéristiques de plus comme le nombre de piétons à l'intersection la plus proche au moment de l'accident ou d'autres pistes de la sorte.
 
-La source principale des données est la suivante : \url{https://donnees.montreal.ca/dataset/collisions-routieres}.
-(et on utilisera peut-être \url{https://donnees.montreal.ca/dataset/comptage-vehicules-pietons})
+La source principale des données est la suivante : \url{https://donnees.montreal.ca/dataset/collisions-routieres}.\\
+De plus, \url{https://donnees.montreal.ca/dataset/comptage-vehicules-pietons}
 
 \end{document}
